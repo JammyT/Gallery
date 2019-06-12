@@ -46,7 +46,7 @@ class GridView: UIView {
     Constraint.on(
       topView.leftAnchor.constraint(equalTo: topView.superview!.leftAnchor),
       topView.rightAnchor.constraint(equalTo: topView.superview!.rightAnchor),
-      topView.heightAnchor.constraint(equalToConstant: 40),
+      topView.heightAnchor.constraint(equalToConstant: 64),
 
       loadingIndicator.centerXAnchor.constraint(equalTo: loadingIndicator.superview!.centerXAnchor),
       loadingIndicator.centerYAnchor.constraint(equalTo: loadingIndicator.superview!.centerYAnchor)
@@ -74,10 +74,10 @@ class GridView: UIView {
 
     closeButton.g_pin(on: .top)
     closeButton.g_pin(on: .left)
-    closeButton.g_pin(size: CGSize(width: 40, height: 40))
+    closeButton.g_pin(size: CGSize(width: 64, height: 64))
 
     arrowButton.g_pinCenter()
-    arrowButton.g_pin(height: 40)
+    arrowButton.g_pin(height: 64)
 
     doneButton.g_pin(on: .centerY)
     doneButton.g_pin(on: .right, constant: -38)
@@ -130,7 +130,7 @@ class GridView: UIView {
     button.setTitleColor(UIColor.white, for: UIControl.State())
     button.setTitleColor(UIColor.lightGray, for: .disabled)
     button.titleLabel?.font = Config.Font.Text.regular.withSize(16)
-    button.setTitle("Gallery.Done".g_localize(fallback: "Done"), for: UIControl.State())
+    button.setTitle("Gallery.Done".g_localize(fallback: "完成"), for: UIControl.State())
     
     return button
   }
